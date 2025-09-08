@@ -42,7 +42,7 @@ function App() {
         <AppBar position="fixed">
           <Toolbar>
             <Typography variant="h6" className={classes.title}>
-              Inventory Management
+              VISHARA
             </Typography>
             <Button color="inherit">
               <Link to="/" className={classes.link}>Dashboard</Link>

@@ -120,7 +120,7 @@ export default function Dashboard() {
         beginAtZero: true,
         title: {
           display: true,
-          text: 'Amount ($)',
+          text: 'Amount (₹)',
         },
       },
       x: {
@@ -201,7 +201,7 @@ export default function Dashboard() {
           <Card className={classes.card}>
             <CardContent>
               <Typography className={classes.cardTitle}>Total Sales</Typography>
-              <Typography className={classes.cardValue}>${totalSales.toFixed(2)}</Typography>
+              <Typography className={classes.cardValue}>₹{totalSales.toFixed(2)}</Typography>
             </CardContent>
           </Card>
         </Grid>
@@ -209,7 +209,7 @@ export default function Dashboard() {
           <Card className={classes.card}>
             <CardContent>
               <Typography className={classes.cardTitle}>Total Purchases</Typography>
-              <Typography className={classes.cardValue}>${totalPurchases.toFixed(2)}</Typography>
+              <Typography className={classes.cardValue}>₹{totalPurchases.toFixed(2)}</Typography>
             </CardContent>
           </Card>
         </Grid>
@@ -217,7 +217,7 @@ export default function Dashboard() {
           <Card className={classes.card}>
             <CardContent>
               <Typography className={classes.cardTitle}>Total Expenses</Typography>
-              <Typography className={classes.cardValue}>${totalExpenses.toFixed(2)}</Typography>
+              <Typography className={classes.cardValue}>₹{totalExpenses.toFixed(2)}</Typography>
             </CardContent>
           </Card>
         </Grid>
@@ -225,7 +225,7 @@ export default function Dashboard() {
           <Card className={classes.card}>
             <CardContent>
               <Typography className={classes.cardTitle}>Total FOC Value</Typography>
-              <Typography className={classes.cardValue}>${totalFocValue.toFixed(2)}</Typography>
+              <Typography className={classes.cardValue}>₹{totalFocValue.toFixed(2)}</Typography>
             </CardContent>
           </Card>
         </Grid>
@@ -234,7 +234,7 @@ export default function Dashboard() {
             <CardContent>
               <Typography className={classes.cardTitle}>Profit</Typography>
               <Typography className={classes.cardValue} style={{ color: profit >= 0 ? 'green' : 'red' }}>
-                ${profit.toFixed(2)}
+                ₹{profit.toFixed(2)}
               </Typography>
             </CardContent>
           </Card>
