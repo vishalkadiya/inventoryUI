@@ -83,7 +83,7 @@ export default function ReportManagement() {
     labels: ['Purchases', 'Sales', 'Expenses', 'FOC Value', 'Profit'],
     datasets: [
       {
-        label: 'Summary ($)',
+        label: 'Summary (₹)',
         data: [
           report.totalPurchase || 0,
           report.totalSale || 0,
@@ -116,7 +116,7 @@ export default function ReportManagement() {
         beginAtZero: true,
         title: {
           display: true,
-          text: 'Amount ($)',
+          text: 'Amount (₹)',
         },
       },
     },
@@ -136,7 +136,7 @@ export default function ReportManagement() {
           <Card className={classes.card}>
             <CardContent>
               <Typography className={classes.cardTitle}>Total Purchases</Typography>
-              <Typography className={classes.cardValue}>${report.totalPurchase.toFixed(2)}</Typography>
+              <Typography className={classes.cardValue}>₹{report.totalPurchase.toFixed(2)}</Typography>
             </CardContent>
           </Card>
         </Grid>
@@ -144,7 +144,7 @@ export default function ReportManagement() {
           <Card className={classes.card}>
             <CardContent>
               <Typography className={classes.cardTitle}>Total Sales</Typography>
-              <Typography className={classes.cardValue}>${report.totalSale.toFixed(2)}</Typography>
+              <Typography className={classes.cardValue}>₹{report.totalSale.toFixed(2)}</Typography>
             </CardContent>
           </Card>
         </Grid>
@@ -152,7 +152,7 @@ export default function ReportManagement() {
           <Card className={classes.card}>
             <CardContent>
               <Typography className={classes.cardTitle}>Total Expenses</Typography>
-              <Typography className={classes.cardValue}>${report.totalExpense.toFixed(2)}</Typography>
+              <Typography className={classes.cardValue}>₹{report.totalExpense.toFixed(2)}</Typography>
             </CardContent>
           </Card>
         </Grid>
@@ -160,7 +160,7 @@ export default function ReportManagement() {
           <Card className={classes.card}>
             <CardContent>
               <Typography className={classes.cardTitle}>Total FOC Value</Typography>
-              <Typography className={classes.cardValue}>${report.totalFocValue.toFixed(2)}</Typography>
+              <Typography className={classes.cardValue}>₹{report.totalFocValue.toFixed(2)}</Typography>
             </CardContent>
           </Card>
         </Grid>
@@ -172,7 +172,7 @@ export default function ReportManagement() {
                 className={classes.cardValue}
                 style={{ color: report.profit >= 0 ? 'green' : 'red' }}
               >
-                ${report.profit.toFixed(2)}
+                ₹{report.profit.toFixed(2)}
               </Typography>
             </CardContent>
           </Card>
@@ -201,7 +201,7 @@ export default function ReportManagement() {
               <TableRow key={purchase.id} className={classes.tableRow}>
                 <TableCell className={classes.tableCell}>{purchase.item?.name || 'N/A'}</TableCell>
                 <TableCell className={classes.tableCell}>{purchase.quantity}</TableCell>
-                <TableCell className={classes.tableCell}>${purchase.cost.toFixed(2)}</TableCell>
+                <TableCell className={classes.tableCell}>₹{purchase.cost.toFixed(2)}</TableCell>
                 <TableCell className={classes.tableCell}>{purchase.company?.name || 'N/A'}</TableCell>
                 <TableCell className={classes.tableCell}>
                   {new Date(purchase.createdAt).toLocaleString()}
@@ -230,7 +230,7 @@ export default function ReportManagement() {
               <TableRow key={sale.id} className={classes.tableRow}>
                 <TableCell className={classes.tableCell}>{sale.item?.name || 'N/A'}</TableCell>
                 <TableCell className={classes.tableCell}>{sale.quantity}</TableCell>
-                <TableCell className={classes.tableCell}>${sale.price.toFixed(2)}</TableCell>
+                <TableCell className={classes.tableCell}>₹{sale.price.toFixed(2)}</TableCell>
                 <TableCell className={classes.tableCell}>{sale.isWholesale ? 'Yes' : 'No'}</TableCell>
                 <TableCell className={classes.tableCell}>{sale.company?.name || 'N/A'}</TableCell>
                 <TableCell className={classes.tableCell}>
